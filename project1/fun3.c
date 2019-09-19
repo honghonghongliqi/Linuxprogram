@@ -1,9 +1,9 @@
 #include"uhead.h"
 
-void uwrite(const char *file_name){
+void uwrite(const char *file_name,int *array,int size){
 
 }
 
-int* uread(const char *file_name){
+void uread(const char *file_name,int *array,int size){
 
 }
