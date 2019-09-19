@@ -4,9 +4,9 @@ int main(){
     struct result ret;
     int a[100],b[100],c[100];
     double t1,t2;
-    char str1[]="randow.dat";//用来存放随机之后的数组的文件名
-    char str2[]="syssort.dat";//用来存放系统排序之后的数组的文件名
-    char str3[]="usort.dat";//用来存放冒泡排序之后的数组的文件名
+    char str1[]="./randow.dat";//用来存放随机之后的数组的文件名
+    char str2[]="./syssort.dat";//用来存放系统排序之后的数组的文件名
+    char str3[]="./usort.dat";//用来存放冒泡排序之后的数组的文件名
     uround(a,100);
     printf("------生成随机数开始-----\n");
     ret=uoprater(a,100);
