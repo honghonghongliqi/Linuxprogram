@@ -9,3 +9,9 @@ struct result{
     float average;
 }
 
+void show(int *,int);//打印结果
+void uround(int *,int);//产生随机数,size为数量
+stuct result uoprater(int *,int);//计算总数和平均数
+void usort(int *,int);//排序
+void 
+
