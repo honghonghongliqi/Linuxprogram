@@ -9,9 +9,13 @@ struct result{
     float average;
 }
 
+
 void show(int *,int);//打印结果
 void uround(int *,int);//产生随机数,size为数量
 stuct result uoprater(int *,int);//计算总数和平均数
-void usort(int *,int);//排序
-void 
+void syssort(int *,int);//系统的排序
+void usort(int *,int);//自己的排序
+double calculate_time();//计算时间差的函数
+void uwrite(char *);//写文件的函数
+int* uread(char *);//读文件的函数
 
