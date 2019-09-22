@@ -18,14 +18,14 @@ int main(){
     printf("------开始系统内置排序------\n");
     t1=calculate_time();
     syssort(b,100);
-    t1=calculate_time-t1;
+    t1=calculate_time()-t1;
     printf("------系统内置排序结束------用时:%f secs\n",t1);
     uwrite("syssort.dat",b,100);
     uread("random.dat",c,100);
     printf("------开始自写冒泡排序------\n");
     t2=calculate_time();
     usort(c,100);
-    t2=calculate_time-t2;
+    t2=calculate_time()-t2;
     printf("------自写冒泡排序结束------用时:%f secs\n",t2);
     uwrite("usort.dat",c,100);
     printf("\n------开始查看文件中数组------\n");
