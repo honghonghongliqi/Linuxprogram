@@ -28,10 +28,11 @@ int main(){
     t2=calculate_time()-t2;
     printf("------自写冒泡排序结束------用时:%f secs\n",t2);
     uwrite("usort.dat",c,100);
-    printf("\n------开始查看文件中数组------\n");
+    printf("\n------开始查看xxx文件中数组------\n");
     system("cat random.dat");
     system("cat sysort.dat");
     system("cat usort.dat");
     printf("\n------查看文件动作结束------\n");
+    printf("\n------")
     return 0;
 }
