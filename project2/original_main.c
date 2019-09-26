@@ -7,7 +7,7 @@ int main(){
     printf("请输入目标文件名:");
     scanf("%s",des);
     fdsrc=open("/etc/passwd",O_RDONLY);
-    if(fasrc<0){
+    if(fdsrc<0){
         exit(1);
     }
     fddes=open(des,flags,0644);
@@ -24,5 +24,4 @@ int main(){
     close(fddes);
     printf("复制“/etc/passwd”文件为“%s”文件成功!\n",des);
     exit(0);
-    )
 }
