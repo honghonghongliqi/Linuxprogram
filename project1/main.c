@@ -33,6 +33,6 @@ int main(){
     system("cat sysort.dat");
     system("cat usort.dat");
     printf("\n------查看文件动作结束------\n");
-    printf("\n------")
+    printf("\n------");
     return 0;
 }
