@@ -14,7 +14,7 @@ void uwrite(const char *file_name,int *array,int size){
 
 void uread(const char *file_name,int *array,int size){
     int handle;
-    if((handle=open(file_name,O_RDONLY|L_INCR,S_IWRITE|S_IREAD))==-1){
+    if((handle=open(file_name,O_RDONLY,S_IWRITE|S_IREAD))==-1){
         printf("Error!\n");
         exit(1);
     }
