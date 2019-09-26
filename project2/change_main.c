@@ -23,5 +23,4 @@ int main(){
     close(fp_new);
     printf("复制“/etc/passwd”文件为“%s”文件成功!\n",des);
     exit(0);
-    )
 }
