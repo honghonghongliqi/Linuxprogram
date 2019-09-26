@@ -10,11 +10,11 @@ int main(){
     if(fasrc<0){
         exit(1);
     }
-    fddes=open(des,flag,0644);
+    fddes=open(des,flags,0644);
     if(fddes<0){
         exit(1);
     }
-    while((nbytes=read(fdsrc,buf,20))>20){
+    while((nbytes=read(fdsrc,buf,20))>0){
         z=write(fddes,buf,nbytes);
         if(z<0){
             perror("写目标文件出错");/*此函数可以用来输出“错误原因信息”字符串*/
