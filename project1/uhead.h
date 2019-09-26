@@ -9,7 +9,7 @@
 struct result{
     long sum;
     float average;
-}
+};
 
 
 void show(int *,int);//打印结果
