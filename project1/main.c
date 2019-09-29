@@ -30,7 +30,7 @@ int main(){
     uwrite("usort.dat",c,100);
     printf("\n------开始查看文件中数组------\n");
     system("cat random.dat");
-    system("cat sysort.dat");
+    system("cat syssort.dat");
     system("cat usort.dat");
     printf("\n------查看文件动作结束------\n");
     printf("\n------");
