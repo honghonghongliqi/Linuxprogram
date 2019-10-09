@@ -20,6 +20,9 @@ int main(){
     syssort(b,100);
     t1=calculate_time()-t1;
     printf("------系统内置排序结束------用时:%f secs\n",t1);
+    printf("------系统内置排序结果如下------\n");
+    show(b,100);
+    printf("---------------------\n");
     uwrite("syssort.dat",b,100);
     uread("random.dat",c,100);
     printf("------开始自写冒泡排序------\n");
@@ -27,8 +30,11 @@ int main(){
     usort(c,100);
     t2=calculate_time()-t2;
     printf("------自写冒泡排序结束------用时:%f secs\n",t2);
+    printf("------系统内置排序结果如下------\n");
+    show(c,100);
+    printf("---------------------\n");
     uwrite("usort.dat",c,100);
-    printf("\n------开始查看文件中数组------\n");
+    printf("\n------开始查看文件中2进制存储文件------\n");
     system("cat random.dat");
     system("cat syssort.dat");
     system("cat usort.dat");
