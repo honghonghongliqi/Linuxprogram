@@ -1,0 +1,13 @@
+库的作用----代码复用----I/O库 1975
+             ----运行环境构成----进程运行必须有库的支持
+库的种类----可重定位二进制文件----静态库&动态链接库
+静态库----.a/.lib----以空间换时间（内存空间耗费大,执行时间短）
+动态链接库----.so/.dil----以时间换空间（执行时间长,内存空间耗费小）
+gcc -c base.c aoprand.c
+ar -rc //静态库必须以lib开头为libxxxxxxx.a
+
+ar -rc libstatic.a aoprand.o base.o
+
+调用staticlib.h
+//可拷贝到/lib&/usrname/lib
+
