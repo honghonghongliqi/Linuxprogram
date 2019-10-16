@@ -5,14 +5,14 @@
 	libdylib.so  
 	localtest  
 	localtest.c  
-##aopend.c
+## aopend.c
 	含max和sum函数  
-##base.c
+## base.c
 	含init和show函数  
-##dylib.h
+## dylib.h
 	含max sum init show函数申明  
-##libdylib.so
+## libdylib.so
 	动态链接库  
-##localtest
+## localtest
 	测试main函数  
 
