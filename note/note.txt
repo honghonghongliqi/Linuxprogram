@@ -11,3 +11,7 @@ ar -rc libstatic.a aoprand.o base.o
 调用staticlib.h
 //可拷贝到/lib&/usrname/lib
 
+创建.so动态链接库----gcc -fPIC -shared -o
+加载动态链接库----dlopen dlsym dlclose
+.so文件的2种链接方式----1.创建执行文件时装载 2.程序运行时装载
+
