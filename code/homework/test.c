@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
       switch(choice)
       {
          case 0:exit(0);break;
-         case 1:
+         case 1:create_file();break;
          case 2:
          case 3:
          case 4:
@@ -31,4 +31,9 @@ void print_menu()
    printf("5.查看当前文件的权限修改文件权限\n");
    printf("****************************\n");
    printf("Please input your choice(0-6):");
+}
+
+void create_file()
+{
+   
 }
