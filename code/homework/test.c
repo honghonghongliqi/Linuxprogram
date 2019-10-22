@@ -1,5 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<sys/types.h>
+#include<sys/stat.h>
 int main(int argc, char *argv[])
 {
    while(1)
@@ -35,5 +37,13 @@ void print_menu()
 
 void create_file()
 {
-   
+   char str[10];
+   printf("请输入您想要创建的文件名称:\n");
+   scanf("%s",str);
+   if((fd=open(str,O_WRONLY|O_CREAT,S_IRUSR|S_IWUSR))==-1)
+   {
+      printf("Error create file");
+      exit(0);
+   }
+   printf("创建文件成功或文件已存在。\n");
 }
