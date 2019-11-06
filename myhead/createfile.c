@@ -1,3 +1,4 @@
+#include"myhead.h"
 void create_file_1()//当前版本号为1
 {
    int fd;
