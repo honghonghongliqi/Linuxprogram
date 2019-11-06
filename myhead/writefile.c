@@ -1,4 +1,6 @@
-int fdsrc,fddes,nbytes;
+#include"myhead.h"
+void write_file_1(){
+    int fdsrc,fddes,nbytes;
     int flags=O_CREAT | O_TRUNC | O_WRONLY;
     int z;
     char buf[20],src[20],des[20];
@@ -22,3 +24,4 @@ int fdsrc,fddes,nbytes;
     close(fddes);
     printf("复制“/etc/passwd”文件为“%s”文件成功!\n",des);
     exit(0);
+}
