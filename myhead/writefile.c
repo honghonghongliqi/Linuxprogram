@@ -1,27 +1,21 @@
 #include"myhead.h"
 void write_file_1(){
-    int fdsrc,fddes,nbytes;
-    int flags=O_CREAT | O_TRUNC | O_WRONLY;
-    int z;
-    char buf[20],src[20],des[20];
-    printf("请输入目标文件名:");
-    scanf("%s",des);
-    fdsrc=open("/etc/passwd",O_RDONLY);
-    if(fdsrc<0){
+    void uwrite(const char *file_name,int *array,int size){
+    char file_name[20];
+    printf("请输入您想要写入内容的文件名:\n");
+    scanf("%s",file_name);
+    int handle;
+    if((handle=open(file_name,O_WRONLY | O_CREAT | O_TRUNC ,0664))==-1){
+        printf("Error!\n");
         exit(1);
     }
-    fddes=open(des,flags,0644);
-    if(fddes<0){
-        exit(1);
+    printf("确认文件打开成功或创建成功，可以开始写入!\n");
+    printf("请输入您想要写入的内容,一次性只能输出20个字符的内容,退出输入请输入空格+回车\n");
+    while(1){
+        char write_mes[20];
+        printf("您本次的输入:\n");
+        scanf("%s",write_mes);
+        write(handle,write_mes,20);
     }
-    while((nbytes=read(fdsrc,buf,20))>0){
-        z=write(fddes,buf,nbytes);
-        if(z<0){
-            perror("写目标文件出错");/*此函数可以用来输出“错误原因信息”字符串*/
-        }
-    }
-    close(fdsrc);
-    close(fddes);
-    printf("复制“/etc/passwd”文件为“%s”文件成功!\n",des);
-    exit(0);
+    close(handle);
 }
