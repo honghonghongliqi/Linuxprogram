@@ -1,5 +1,5 @@
 #include"myhead.h"
-void write_file_1(){
+void write_file_1(){//文件读写函数版本号:1
     void uwrite(const char *file_name,int *array,int size){
     char file_name[20];
     printf("请输入您想要写入内容的文件名:\n");
