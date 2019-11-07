@@ -1,17 +1,26 @@
-#include"myhead.h"
+//#include"myhead.h"
+#include<stdlib.h>
+#include<stdio.h>
+#include<time.h>
+#include<math.h>
+#include<sys/stat.h>
+#include<sys/types.h>
+#include<unistd.h>
+#include<fcntl.h>
 int main(int argc, char *argv[])
 {
    while(1)
    {
-      system("clear");
+      //system("clear");
       int choice;
       print_menu();
       scanf("%d",&choice);
+      char str[]="ls";
       switch(choice)
       {
          case 0:exit(0);break;
-         case 1:create_file_1();break;
-         case 2:
+         case 1:/*create_file_1();*/break;
+         case 2:system(str);pause();
          case 3:
          case 4:
          case 5:break;

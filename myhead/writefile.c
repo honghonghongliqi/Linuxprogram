@@ -1,6 +1,5 @@
 #include"myhead.h"
 void write_file_1(){//文件读写函数版本号:1
-    void uwrite(const char *file_name,int *array,int size){
     char file_name[20];
     printf("请输入您想要写入内容的文件名:\n");
     scanf("%s",file_name);
@@ -15,7 +14,9 @@ void write_file_1(){//文件读写函数版本号:1
         char write_mes[20];
         printf("您本次的输入:\n");
         scanf("%s",write_mes);
-        write(handle,write_mes,20);
+        write(handle,write_mes,sizeof(write_mes));
     }
     close(handle);
+    printf("文件写入操作成功！，按任意键回到主菜单！\n");
+    system("PAUSE");
 }
