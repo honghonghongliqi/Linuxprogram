@@ -1,15 +1,23 @@
 #include"myhead.h"
-void read_file_1(const char *file_name,int *array,int size){//文件读函数版本号为:1
+void read_file_1( ){//文件读函数版本号为:1
     char file_name[20];
-    char buf[20];
+    char buf[1024];
     int handle;
-    if((handle=open(file_name,O_RDONLY,S_IWRITE|S_IREAD))==-1){
-        printf("Error!\n");
-        exit(1);
+    printf("请输入您想要读取的文件名:");
+    scanf("%s",buf);
+    if((handle=open(file_name,O_RDONLY,S_IWRITE|S_IREAD))==-1)
+    {
+       perror("read fail");
+       exit(1);
     }
-    for(int x=0;x<size;x++){
-        read(handle,array+x,sizeof(*array));
+    if(read(hadle,buf,sizeof(buf))==-1)
+    {
+       perror("read fail");
+       exit(1);
     }
+    printf("读取成功！,文件内容如下:\n");
+    printf("---------------------------------------------\n");
+    printf("%s",buf);
+    printf("---------------------------------------------\n");
     close(handle);
-    system("PAUSE");
 }
