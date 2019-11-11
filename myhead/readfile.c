@@ -4,13 +4,13 @@ void read_file_1( ){//文件读函数版本号为:1
     char buf[2048];
     int handle;
     printf("请输入您想要读取的文件名:");
-    scanf("%s",buf);
+    scanf("%s",file_name);
     if((handle=open(file_name,O_RDONLY,S_IWRITE|S_IREAD))==-1)
     {
        perror("read fail");
        exit(1);
     }
-    if(read(hadle,buf,sizeof(buf))==-1)
+    if(read(handle,buf,sizeof(buf))==-1)
     {
        perror("read fail");
        exit(1);
@@ -20,4 +20,7 @@ void read_file_1( ){//文件读函数版本号为:1
     printf("%s",buf);
     printf("---------------------------------------------\n");
     close(handle);
+    printf("\n\n按任意键返回主菜单");
+    getchar();
+    getchar();
 }

@@ -12,5 +12,8 @@ void create_file_1()//当前版本号为1
    }
    printf("创建文件成功或文件已存在。\n");
    close(fd);
+   printf("\n\n按任意键返回主菜单");
+   getchar();
+   getchar();
 }
 
