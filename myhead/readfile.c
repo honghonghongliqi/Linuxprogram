@@ -1,7 +1,7 @@
 #include"myhead.h"
 void read_file_1( ){//文件读函数版本号为:1
     char file_name[20];
-    char buf[1024];
+    char buf[2048];
     int handle;
     printf("请输入您想要读取的文件名:");
     scanf("%s",buf);
