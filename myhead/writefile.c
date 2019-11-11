@@ -18,5 +18,5 @@ void write_file_1(){//文件读写函数版本号:1
     }
     close(handle);
     printf("文件写入操作成功！，按任意键回到主菜单！\n");
-    system("PAUSE");
+    getchar();
 }
