@@ -1,6 +1,7 @@
 #include"myhead.h"
 void modi_file_1()//修改文件权限函数,版本号为:1
 {
+   int handle;
    int mode;
    int mode_u;
    int mode_g;
@@ -14,7 +15,7 @@ void modi_file_1()//修改文件权限函数,版本号为:1
       exit(1);
    }
    printf("请输入您要修改的权限(以整数形式型如：777):");
-   scanf("%d",mode);
+   scanf("%d",&mode);
    if(mode > 777 || mode< 0)
       exit(0);
    mode_u=mode/100;
