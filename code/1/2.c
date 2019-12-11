@@ -1,23 +1,16 @@
 #include"my.h"
-void signalCatch(int signalValue){
-	switch(signalValue){
-		case 1:
-			printf("Catch SIGUP\n");
-			signal(1,SIG_DFL);
-			break;
-		case 2:
-                        printf("Catch SIGINT\n");
-                        break;
-		case 3:
-                        printf("Catch QUIT\n");
-                        break;
-	}
+void fun(void *arg){
+	printf("worker thread is running.pid=%d\n",getpid());
 }
 int main(){
-	printf("pid=%d.\n",getpid());
-	signal(1,signalCatch);
-	signal(2,signalCatch);
-	signal(3,signalCatch);
-	while(1);
+	pthread_t tid;
+	int ret;
+	ret = pthread_create(&tid,NULL,(void *(*)())fun,NULL);
+	if(ret!=0){
+		perror("create failed.\n");
+		return -1;
+	}
+	pthread_join(tid,NULL);
+	printf("Master %d:All Done!\n",getpid());
 	return 0;
 }
