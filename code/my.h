@@ -1,14 +1,17 @@
-#include<pthread.h>
 #include<stdio.h>
 #include<stdlib.h>
+#include<errno.h>
 #include<unistd.h>
-#include<limits.h>
 #include<string.h>
+#include<fcntl.h>
+#include<pthread.h>
 #include<sys/time.h>
 #include<sys/types.h>
-#include<syscall.h>
-#include<errno.h>
-#define NUM 4
-#define LOOP 1000000
-int count(int);
-void *thread_function(void *arg);
+#include<limits.h>
+#include<semaphore.h>
+#define LENGTH 100
+#define LOOP 1000
+#define NUM 2
+#define TN 100
+#define WRITER_FIRST
+int getMax(int *);
