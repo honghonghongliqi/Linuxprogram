@@ -1,11 +1,11 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<errno.h>
-#include <string.h>
-#include <sys/types.h>
-#include <netinet/in.h>
-#include <sys/socket.h>
-#include <sys/wait.h>
+#include<string.h>
+#include<sys/types.h>
+#include<netinet/in.h>
+#include<sys/socket.h>
+#include<sys/wait.h>
 #define SERVPORT 3333 /*服务器监听端口号 */
 #define BACKLOG 10 /* 最大同时连接请求数 */
 
@@ -39,7 +39,7 @@ int main()
 			perror("accept error");
 			continue;
 		}
-		printf("收到一个连接来自： %s\n", inet_ntoa(remote_addr.sin_addr));
+		printf("收到一个连接来自： %d\n", inet_ntoa(remote_addr.sin_addr));
 		if (!fork()) { /* 子进程代码段 */
 			if (send(client_fd, "连接上了 \n", 26, 0) == -1)
 				perror("send 出错！");
@@ -49,4 +49,5 @@ int main()
 	close(client_fd);
 	}
 }
+
 
