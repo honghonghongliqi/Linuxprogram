@@ -43,9 +43,6 @@ int client_fd=accept(serverSocket, (struct sockaddr *)&clientArr, &ilength);
                 }
                 pthread_join(tid[i],NULL);
         }
-	/*for(int i=0;i<TN;i++){
-                pthread_join(tid[i],NULL);
-        }*/
         close(serverSocket);
 	return 0;
 }
