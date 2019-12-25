@@ -22,7 +22,7 @@ void sleep( clock_t wait )
 }
 
 
-int main() 
+/*int main() 
 { 
         int i=10;
         while(i--)
@@ -31,5 +31,5 @@ int main()
 	Show();
 	sleep(1000000);
 	}
-}
+}*/
 

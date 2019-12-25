@@ -138,7 +138,6 @@ void *serviceThread(void *param){
 }
 void *clientThread(void *param){
         getNowDate();
-	
 	int sockfd;			/*套接字描述符*/
 	int recvbytes;
         char getData[100];
